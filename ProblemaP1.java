@@ -21,19 +21,19 @@ public class ProblemaP1 {
             }
 
             
-            int infinito = Integer.MAX_VALUE; 
+            int infinito = Integer.MAX_VALUE/2; 
             int[][][] DP = new int[ n+1][j+ 1][m+1];
-            DP[0][0][0] = 0;
 
 
 
-            
+
             for (int i = 0; i <= n; i++) {
                 for (int k = 0; k <= j; k++) {
                     Arrays.fill(DP[i][k], infinito);
                 }
             }
 
+            DP[0][0][0] = 0;
 
             for (int i = 1; i <= n; i++) {
                 for (int k = 0; k <= Math.min(i, j); k++) {
