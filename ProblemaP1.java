@@ -1,6 +1,6 @@
 //AUTORES:
 //WILLIAM POLLOCK, 202221321
-//NICOLÁS HERNÁNDEZ, {CODIGO}
+//NICOLÁS HERNÁNDEZ, 202322148
 
 import java.util.Scanner;
 import java.util.Arrays;
