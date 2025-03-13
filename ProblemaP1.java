@@ -21,7 +21,7 @@ public class ProblemaP1 {
             }
 
             
-            int infinito = Integer.MAX_VALUE/2; 
+            int infinito = Integer.MAX_VALUE; 
             int[][][] DP = new int[ n+1][j+ 1][m+1];
 
 
