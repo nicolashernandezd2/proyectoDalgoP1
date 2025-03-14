@@ -23,8 +23,8 @@ public class ProblemaP1 {
             }
 
             //Creamos una matriz tridimensional, para resolver el problema con Programacion Dinamica
-            // el elemento DP[i][r][s] va a ser la mínima suma en una lista de i jugadores,
-            // en la que suman solo los primeros r, gastando a lo sumo s swaps.
+            // el elemento DP[i][k][s] va a ser la mínima suma en una lista de i jugadores,
+            // en la que suman solo los primeros k, gastando a lo sumo s swaps.
             // Dimensiones de la matriz: (n+1) x (j+1) x (m+1)
             int infinito = Integer.MAX_VALUE; 
             int[][][] DP = new int[ n+1][j+ 1][m+1];
@@ -51,7 +51,7 @@ public class ProblemaP1 {
                         DP[i][k][sUsados] = Math.min(DP[i][k][sUsados], DP[i-1][k][sUsados]);
                         //opcion 2): si escogemos al jugador i
                         if (k > 0) {
-                            // costo de mover el jugador i a la posición r sin alterar el orden relativo del array
+                            // costo de mover el jugador i a la posición k sin alterar el orden relativo del array
                             int costoIntercambio = (i - k); 
                             //si aún tenemos swaps disponibles, movemos al jugador y actualizamos el valor mínimo.
                             if (sUsados >=costoIntercambio) {
